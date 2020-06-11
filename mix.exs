@@ -7,7 +7,20 @@ defmodule Revista.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      deps: deps()
+      deps: deps(),
+      releases: [
+        revista_unified: [
+          applications: [
+            admin: :permanent,
+            auth: :permanent,
+            cms: :permanent,
+            twitter: :permanent,
+            web: :permanent
+          ],
+          steps: [:assemble, :tar]
+        ]
+      ],
+      default_release: :revista_unified
     ]
   end
 
