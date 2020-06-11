@@ -9,7 +9,7 @@ defmodule Auth.MixProject do
       config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
-      elixir: "~> 1.7",
+      elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       deps: deps(),
@@ -32,10 +32,10 @@ defmodule Auth.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:comeonin, "~> 4.0"},
-      {:argon2_elixir, "~> 1.2"},
-      {:ecto_sql, "~> 3.0-rc"},
-      {:postgrex, ">= 0.0.0-rc"}
+      {:comeonin, "~> 5.3"},
+      {:argon2_elixir, "~> 2.3"},
+      {:ecto_sql, "~> 3.4"},
+      {:postgrex, "~> 0.15"}
     ]
   end
 

@@ -9,7 +9,7 @@ defmodule Twitter.MixProject do
       config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
-      elixir: "~> 1.5",
+      elixir: "~> 1.10",
       elixirc_paths: elixirc_paths(Mix.env()),
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
@@ -37,16 +37,16 @@ defmodule Twitter.MixProject do
   # Type `mix help deps` for examples and options.
   defp deps do
     [
-      {:phoenix, "~> 1.4.0-rc", override: true},
-      {:phoenix_pubsub, "~> 1.1"},
-      {:gettext, "~> 0.11"},
-      {:jason, "~> 1.0"},
-      {:plug_cowboy, "~> 2.0"},
-      {:httpoison, "~> 1.4"},
-      {:absinthe, "~> 1.4.0"},
-      {:absinthe_plug, "~> 1.4.0"},
-      {:poison, "~> 3.1.0"},
-      {:absinthe_phoenix, "~> 1.4.0"}
+      {:phoenix, "~> 1.5", override: true},
+      {:phoenix_pubsub, "~> 2.0"},
+      {:gettext, "~> 0.18"},
+      {:jason, "~> 1.2"},
+      {:plug_cowboy, "~> 2.3"},
+      {:httpoison, "~> 1.7"},
+      {:absinthe, "~> 1.5"},
+      {:absinthe_plug, "~> 1.5"},
+      {:poison, "~> 4.0"},
+      {:absinthe_phoenix, "~> 2.0"}
     ]
   end
 
